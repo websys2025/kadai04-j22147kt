@@ -64,12 +64,14 @@
             // 配列のオブジェクト作成
             const item_list = new Array(items.length);
             const btn = new Array(items.length);
-
+            
+            for (i=0; i <= item_list.length -1; i++ ){ 
+                item_list[i] = new Item(items[i].name,items[i].price,items[i].stock); 
+                console.log(`id: ${Item.number}, name: ${item_list[i].name}, ${item_list[i].price}円, 残り${item_list[i].stock}個`); 
+            }
+            
             // 課題4-1. ここにコード書く
             // 商品オブジェクトの生成
-            for(i = 0; i<items.length; i++){ 
-                itemArea.innerHTML += `<tr><th>${item_list[i].name}</th><th>${item_list[i].price}</th><th id="stock${item_list[i].id}">${item_list[i].stock}</th><th><button type="button" id="button${item_list[i].id}">購入</button></th></tr>`; 
-            }
             
             // 課題4-2. ここにコードを書く
             // 商品表の作成
